@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #121212; 
+  color: #e0e0e0;            
+}
+
+h1 {
+  margin-bottom: 50px;
+  color: #f0f0f0;
+}
+
+.card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 70px 26px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  max-width: 300px;
+  margin: 0 auto 30px auto;
+}
+
+#setup {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#setup input {
+  padding: 8px;
+  width: 200px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+#setup button {
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  color: #e0e0e0;
+}
+
+#setup input,
+#setup button {
+  box-sizing: border-box;
+  width: 200px;
+}
+
+#setup button:hover {
+  background-color: #444;
+}
+
+/* Contenedor del juego */
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos de las celdas */
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #121212;  /* Fondo de cada celda */
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 4px solid #333;     /* Bordes oscuros */
+}
+
+.cell[data-index="0"] {
+  border-top: none;
+  border-left: none;
+}
+.cell[data-index="1"] {
+  border-top: none;
+}
+.cell[data-index="2"] {
+  border-top: none;
+  border-right: none;
+}
+.cell[data-index="3"] {
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+.cell[data-index="4"] {
+   border-top: none;
+   border-bottom: none;
+}
+.cell[data-index="5"] {
+  border-right: none;
+     border-top: none;
+   border-bottom: none;
+}
+.cell[data-index="6"] {
+  border-bottom: none;
+  border-left: none;
+}
+.cell[data-index="7"] {
+  border-bottom: none;
+}
+.cell[data-index="8"] {
+  border-bottom: none;
+  border-right: none;
+}
+
+.cell:hover {
+  background-color: #2a2a2a;
+}
+
+/* Mensaje de estado */
+#status {
+  font-size: 1.2rem;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+/* Botón de reiniciar */
+#restart {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  color: #e0e0e0;
+}
+
+#restart:hover {
+  background-color: #444;
+}
